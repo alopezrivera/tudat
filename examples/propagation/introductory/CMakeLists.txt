@@ -39,9 +39,8 @@ TUDAT_ADD_EXECUTABLE(application_InnerLongSolarSystemPropagation
 
 TUDAT_ADD_EXECUTABLE(application_VariationalEquationsPropagatorExample
         "variationalEquationsPropagatorExample.cpp"
-        ${Tudat_PROPAGATION_LIBRARIES}
+        ${Tudat_PROPAGATION_LIBRARIES} ${Tudat_ESTIMATION_LIBRARIES}
 )
-
 
 TUDAT_ADD_EXECUTABLE(application_EmpiricalAccelerationExample
         "empiricalAccelerationExample.cpp"
