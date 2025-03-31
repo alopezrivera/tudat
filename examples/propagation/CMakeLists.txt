@@ -7,14 +7,5 @@
 #    a copy of the license with this file. If not, please or visit:
 #    http://tudat.tudelft.nl/LICENSE.
 
-if (TUDAT_BUILD_TUDAT_TUTORIALS)
-    message("Building Tudat tutorials.")
-    add_subdirectory(propagation)
-    add_subdirectory(estimation)
-    add_subdirectory(mission_design)
-endif ()
-
-#if (TUDAT_BUILD_WITH_PAGMO)
-#    message("Building pagmo tutorials.")
-#    add_subdirectory(pagmo)
-#endif ()
+add_subdirectory(introductory)
+add_subdirectory(advanced)
