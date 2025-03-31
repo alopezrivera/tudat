@@ -7,7 +7,7 @@ namespace tudat_applications
 {
 
 //! Get path for output directory.
-static inline std::string getOutputPath( const std::string& extraDirectory = "" )
+static inline std::string getOutputPath( const std::string& extraDirectory = "SimulationOutput" )
 {
     // Declare file path string assigned to filePath.
     // __FILE__ only gives the absolute path of the header file!
@@ -15,8 +15,8 @@ static inline std::string getOutputPath( const std::string& extraDirectory = "" 
 
     // Strip filename from temporary string and return root-path string.
     std::string reducedPath = filePath_.substr( 0, filePath_.length( ) -
-                                std::string( "applicationOutput.h" ).length( ) );
-    std::string outputPath = reducedPath + "SimulationOutput/";
+                                std::string( "include/tudat/io/applicationOutput.h" ).length( ) );
+    std::string outputPath = reducedPath;
     if( extraDirectory != "" )
     {
         outputPath += extraDirectory;
